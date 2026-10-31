@@ -1,0 +1,48 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 132,
+            "y": 0
+          },
+          "nodeIndex": "Superstore_LIMPIO2",
+          "nodeLineageTag": "07398cac-b544-4a5c-8472-d26cbec8b83f",
+          "size": {
+            "height": 472,
+            "width": 304
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 575,
+            "y": 22
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "1bb65d6e-ee20-402b-b95e-a8489995984a",
+          "size": {
+            "height": 297,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

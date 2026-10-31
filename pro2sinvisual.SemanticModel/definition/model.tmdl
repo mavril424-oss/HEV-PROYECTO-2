@@ -1,0 +1,22 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-MX
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Superstore_LIMPIO2"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Superstore_LIMPIO2
+ref table DateTableTemplate_173bcf6e-11cf-4026-b674-3fbdd438ea50
+ref table LocalDateTable_ab3a2b62-20b0-4faa-9b7f-f60ef20f59fe
+ref table LocalDateTable_2943ec80-727b-4d65-9d7a-456ffbf222c6
+ref table Medidas
+
+ref cultureInfo es-ES
+

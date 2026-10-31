@@ -1,0 +1,57 @@
+table Medidas
+	lineageTag: 1bb65d6e-ee20-402b-b95e-a8489995984a
+
+	measure 'Ventas Totales' = SUM('Superstore_LIMPIO2'[Sales])
+		lineageTag: 15c2a3c1-e777-43af-acc3-0763de845666
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Beneficio Total' = SUM('Superstore_LIMPIO2'[Profit])
+		lineageTag: a08ff714-9413-45e4-a85a-c30bb113a269
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Margen de Beneficio' = DIVIDE([Beneficio Total], [Ventas Totales], 0)
+		lineageTag: c3d71024-42d8-4eeb-810a-6805761b326b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Ordenes' = DISTINCTCOUNT('Superstore_LIMPIO2'[Order ID])
+		formatString: 0
+		lineageTag: ac29e0e6-b39c-4871-b98e-8c3ca38b3649
+
+	measure 'Cantidad Total' = SUM('Superstore_LIMPIO2'[Quantity])
+		formatString: 0
+		lineageTag: 15ab3fe8-cf14-4a38-8178-f1feb8f8bbb3
+
+	measure 'Descuento Promedio' = AVERAGE('Superstore_LIMPIO2'[Discount])
+		lineageTag: f712d546-8853-4855-8b2d-83e1ed880743
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Ticket Promedio' = DIVIDE([Ventas Totales], [Total Ordenes], 0)
+		lineageTag: d5ddd469-d444-45a5-a711-102af72a03cf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Unidades Vendidas' = SUM('Superstore_LIMPIO2'[Quantity])
+		formatString: 0
+		lineageTag: f7701c40-7db6-4c7f-936b-6650e49ae1cb
+
+	column Column
+		formatString: 0
+		lineageTag: bf75b1b4-d6a5-4a34-a7f9-ee5726c81a89
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 7aed55448d1c4a118d998821793465e4
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+
